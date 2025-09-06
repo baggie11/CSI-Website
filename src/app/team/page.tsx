@@ -1,10 +1,11 @@
-// pages/team.js
+// pages/team.tsx
 "use client"
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import teams from '../../data.js';
+import teams from '../../data';
+import { Team, Member } from '../../types/index';
 
-export default function Team() {
+export default function TeamMembers() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
       <Head>
@@ -39,7 +40,7 @@ export default function Team() {
           </p>
         </div>
 
-        {teams.map((team) => (
+        {teams.map((team: Team) => (
           <TeamSection key={team.id} team={team} />
         ))}
       </main>
@@ -63,7 +64,11 @@ export default function Team() {
   );
 }
 
-function TeamSection({ team }) {
+interface TeamSectionProps {
+  team: Team;
+}
+
+function TeamSection({ team }: TeamSectionProps) {
   // For Faculty Coordinator team with only 1 member, center it
   if (team.id === 1 && team.members.length === 1) {
     return (
@@ -90,7 +95,7 @@ function TeamSection({ team }) {
         </h3>
         
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-          {team.members.map((member) => (
+          {team.members.map((member: Member) => (
             <div key={member.id} className="w-full max-w-xs">
               <MemberCard member={member} />
             </div>
@@ -108,7 +113,7 @@ function TeamSection({ team }) {
       </h3>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-        {team.members.map((member) => (
+        {team.members.map((member: Member) => (
           <MemberCard key={member.id} member={member} />
         ))}
       </div>
@@ -116,7 +121,11 @@ function TeamSection({ team }) {
   );
 }
 
-function MemberCard({ member }) {
+interface MemberCardProps {
+  member: Member;
+}
+
+function MemberCard({ member }: MemberCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg flex flex-col h-full mx-auto w-full">
       {/* Image section with smaller profile picture */}
@@ -129,9 +138,7 @@ function MemberCard({ member }) {
               src={member.image || '/default-profile.png'} 
               alt={member.name} 
               className="h-full w-full object-cover"
-              onError={(e) => {
-                e.target.src = '/default-profile.png';
-              }}
+              
             />
           </div>
         </div>

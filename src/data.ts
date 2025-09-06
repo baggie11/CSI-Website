@@ -1,5 +1,7 @@
 //team data
-const teams = [
+import { Team } from "./types";
+
+const teams :  Team[] = [
     {
         id : 1,
         name : "Faculty Coordinator",
@@ -7,6 +9,7 @@ const teams = [
             {
                 id : 1,
                 name : 'Dr. R. Kanchana',
+                role : "Faculty Coordinator",
                 image : "images/team/kanchana.png",
             }
         ]
