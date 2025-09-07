@@ -14,24 +14,6 @@ export default function TeamMembers() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col items-center">
-            <div className="flex items-center mb-4">
-              <div className="bg-white rounded-full p-2 mr-4">
-                <svg className="w-10 h-10" style={{ color: '#005191' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zm0 2.5L20 7l-8 4-8-4 8-4.5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h1 className="text-3xl font-bold">CSI Student Chapter</h1>
-            </div>
-            <p className="text-lg opacity-90">SSN College of Engineering</p>
-          </div>
-        </div>
-      </header>
-
       <main className="container mx-auto px-4 py-8 flex-grow max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold mb-4" style={{ color: '#2D2D2D' }}>Meet Our Amazing Team!</h2>
@@ -45,21 +27,6 @@ export default function TeamMembers() {
         ))}
       </main>
 
-      <footer className="text-white py-6 mt-12" style={{ backgroundColor: '#2D2D2D' }}>
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center items-center mb-4">
-            <div className="rounded-full p-2 mr-3" style={{ backgroundColor: '#005191' }}>
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7l10 5 10-5-10-5zm0 2.5L20 7l-8 4-8-4 8-4.5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-bold">CSI SSN Student Chapter</h3>
-          </div>
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} All Rights Reserved</p>
-        </div>
-      </footer>
     </div>
   );
 }
