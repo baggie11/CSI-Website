@@ -42,7 +42,7 @@ const teams :  Team[] = [
         members : [
             {
                 id : 1,
-                name : "Karithik Raja",
+                name : "Karthik Raja",
                 role : "Design Head",
                 dept : "Computer Science",
                 year : "IV Year",
@@ -85,6 +85,14 @@ const teams :  Team[] = [
                 dept : "EEE",
                 year : "III Year",
                 image : "images/team/design/arthi.png",
+            },
+            {
+                id : 7,
+                name : "Shree Vishali K",
+                role : "Design Team Member",
+                dept : "Computer Science",
+                year : "II Year",
+                image : "images/team/design/shreevishali.png",
             }
         ]
     },
@@ -104,8 +112,9 @@ const teams :  Team[] = [
                 id : 2,
                 name : "Akshith Vishwanathan",
                 role : "Deputy Event Management Head",
-                dept : "Computer Science",
+                dept : "M.Tech Computer Science",
                 year : "III Year",
+                image : "images/team/event/akshith.png",
             },{
                 id : 3,
                 name : "Harini LV",
@@ -123,7 +132,7 @@ const teams :  Team[] = [
                 image : "images/team/event/sreenithi.png",
             },
             {
-                if : 5,
+                id : 5,
                 name : "Shivani Garimella",
                 role : "Event Management Team Member",
                 dept : "Information Technology",
@@ -297,7 +306,7 @@ const teams :  Team[] = [
                 role : "Outreach Team Member",
                 dept : "ECE",
                 year : "III Year",
-                image : "images/team/outreach/padhmanethri.png",
+                image : "images/team/outreach/padmanethri.png",
             },
             {
                 id : 4,
