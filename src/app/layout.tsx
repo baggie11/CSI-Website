@@ -49,8 +49,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
-          {/* Header with integrated Navigation - No gap */}
-          <header className="text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
+          {/* Header with integrated Navigation - Made Sticky */}
+          <header className="sticky top-0 z-50 text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col items-center">
                 <div className="flex items-center mb-4">
