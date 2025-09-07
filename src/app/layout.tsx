@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,28 +50,54 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
-          {/* Header with integrated Navigation - Made Sticky */}
-          <header className="sticky top-0 z-50 text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
+          {/* Non-sticky Header */}
+          <header className="text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
             <div className="container mx-auto px-4 py-6">
-              <div className="flex flex-col items-center">
-                <div className="flex items-center mb-4">
-                  <div className="bg-white rounded-full p-2 mr-4">
-                    <svg className="w-10 h-10" style={{ color: '#005191' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7l10 5 10-5-10-5zm0 2.5L20 7l-8 4-8-4 8-4.5z" />
-                      <path d="M2 17l10 5 10-5" />
-                      <path d="M2 12l10 5 10-5" />
-                    </svg>
+              {/* Desktop Header Layout - Logo and Title Together */}
+              <div className="hidden md:flex items-center justify-center">
+                <div className="flex items-center gap-4">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/csilogo.jpg"
+                      alt="CSI Logo"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
-                  <h1 className="text-3xl font-bold">CSI Student Chapter</h1>
+                  <div className="text-left">
+                    <h2 className="text-2xl font-bold leading-tight">Computer Society of India</h2>
+                    <p className="text-lg opacity-90 leading-tight">SSN College of Engineering</p>
+                  </div>
                 </div>
-                <p className="text-lg opacity-90">SSN College of Engineering</p>
+              </div>
+
+              {/* Mobile Header Layout - Logo and Title Together */}
+              <div className="md:hidden">
+                <div className="flex items-center justify-center">
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src="/csilogo.jpg"
+                        alt="CSI Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <h2 className="text-xl font-bold leading-tight">Computer Society of India</h2>
+                      <p className="text-base opacity-90 leading-tight">SSN College of Engineering</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </header>
 
-            {/* Navigation - Seamlessly integrated with header */}
+          {/* Sticky Navigation Bar */}
+          <nav className="sticky top-0 z-50 text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
             <div className="container mx-auto px-4">
               {/* Desktop Navigation */}
-              <div className="hidden md:flex justify-center pb-4">
+              <div className="hidden md:flex justify-center py-4">
                 <div className="flex space-x-8">
                   <a 
                     href="/" 
@@ -180,7 +207,7 @@ export default function RootLayout({
               </div>
 
               {/* Mobile Navigation Toggle */}
-              <div className="md:hidden flex justify-center pb-3">
+              <div className="md:hidden flex justify-center py-3">
                 <button
                   onClick={toggleMenu}
                   className="px-4 py-3 rounded-full font-medium text-white transition-all duration-300 transform hover:scale-105 shadow-md backdrop-blur-md border border-white border-opacity-30 hover:shadow-lg"
@@ -322,7 +349,7 @@ export default function RootLayout({
                 </div>
               )}
             </div>
-          </header>
+          </nav>
 
           {/* Main Content */}
           <main className="flex-1">
@@ -361,17 +388,16 @@ export default function RootLayout({
                 </a>
               </div>
               <div className="flex justify-center items-center mb-4">
-                <div className="rounded-full p-2 mr-3" style={{ backgroundColor: '#005191' }}>
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 2.5L20 7l-8 4-8-4 8-4.5z" />
-                    <path d="M2 17l10 5 10-5" />
-                    <path d="M2 12l10 5 10-5" />
-                  </svg>
+                <div className="relative w-10 h-10 mr-3 rounded-full overflow-hidden">
+                  <Image
+                    src="/csilogo.jpg"
+                    alt="CSI Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-lg font-bold">CSI SSN Student Chapter</h3>
               </div>
-              
-              
               
               <p className="text-gray-400 text-sm">© {new Date().getFullYear()} All Rights Reserved</p>
             </div>
