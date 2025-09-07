@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 const ContactPage = () => {
@@ -9,6 +10,13 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // This ensures rendering only happens on the client
+    setIsClient(true);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,7 +28,6 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({
@@ -30,6 +37,11 @@ const ContactPage = () => {
       message: ''
     });
   };
+
+  if (!isClient) {
+    // Avoid rendering until after hydration completes
+    return null;
+  }
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
@@ -54,11 +66,10 @@ const ContactPage = () => {
               <h3 className="text-xl font-bold mb-6 text-center" style={{ color: '#005191' }}>
                 Contact Information
               </h3>
-              
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-full mr-4" style={{ color: '#005191' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -67,10 +78,10 @@ const ContactPage = () => {
                     <p className="text-gray-600 text-sm">SSN College of Engineering<br />Kalavakkam, Chennai - 603110</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-full mr-4" style={{ color: '#005191' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
@@ -80,20 +91,16 @@ const ContactPage = () => {
                     <p className="text-gray-600 text-sm">csi.studentchapter@ssn.edu.in</p>
                   </div>
                 </div>
-                
-                
               </div>
-             
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="w-full md:w-2/3">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold mb-6 text-center" style={{ color: '#005191' }}>
                 Send Us a Message
               </h3>
-              
               <form onSubmit={handleSubmit} className="space-y-6 text-black">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -110,7 +117,7 @@ const ContactPage = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email Address
@@ -126,7 +133,7 @@ const ContactPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject
@@ -141,7 +148,7 @@ const ContactPage = () => {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
@@ -156,7 +163,7 @@ const ContactPage = () => {
                     required
                   ></textarea>
                 </div>
-                
+
                 <div className="text-center">
                   <button
                     type="submit"
@@ -170,8 +177,6 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        
-        
       </main>
     </div>
   );
