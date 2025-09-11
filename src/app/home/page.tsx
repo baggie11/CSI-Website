@@ -16,47 +16,111 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#F5F5F5' }}>
-      {/* Hero Section - Enhanced Animations */}
-      <div className="relative py-20 overflow-hidden">
-        {/* Background with gradient overlay - Animated */}
-        <div className={`absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 transition-all duration-2000 ease-out ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'}`}>
-          {/* Animated background pattern - Staggered entrance */}
-          <div className={`absolute inset-0 transition-all duration-1500 delay-500 ease-out ${isLoaded ? 'opacity-20' : 'opacity-0'}`}>
-            <div className={`absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full animate-pulse transition-all duration-1000 delay-700 ease-out ${isLoaded ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-8 -translate-y-8'}`}></div>
-            <div className={`absolute top-3/4 right-1/4 w-24 h-24 bg-white rounded-full animate-pulse transition-all duration-1000 delay-1000 ease-out ${isLoaded ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 translate-x-8 -translate-y-8'}`} style={{ animationDelay: '1s' }}></div>
-            <div className={`absolute bottom-1/3 left-1/3 w-16 h-16 bg-white rounded-full animate-pulse transition-all duration-1000 delay-1200 ease-out ${isLoaded ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-4 translate-y-8'}`} style={{ animationDelay: '2s' }}></div>
-          </div>
+      {/* Hero Section - Modern Illustrated Design */}
+      <div className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Decorative Elements */}
+        <div className={`absolute inset-0 transition-all duration-1500 delay-300 ease-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+          {/* Floating geometric shapes */}
+          <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}></div>
+          <div className="absolute top-32 right-20 w-3 h-3 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '2.5s' }}></div>
+          <div className="absolute bottom-40 left-20 w-2 h-2 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '2s' }}></div>
+          <div className="absolute bottom-20 right-10 w-5 h-5 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '2.8s' }}></div>
+          
+          {/* Plus signs */}
+          <div className="absolute top-24 right-1/3 text-2xl text-blue-300 animate-pulse" style={{ animationDelay: '0s' }}>+</div>
+          <div className="absolute bottom-32 left-1/4 text-xl text-purple-300 animate-pulse" style={{ animationDelay: '1s' }}>+</div>
+          <div className="absolute top-1/2 right-16 text-lg text-green-300 animate-pulse" style={{ animationDelay: '0.5s' }}>+</div>
         </div>
 
-        {/* Main Content */}
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-          {/* Main Title - Smooth slide up with fade */}
-          <h1 className={`text-4xl md:text-6xl font-bold text-white mb-4 transition-all duration-1200 delay-400 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            Welcome to CSI Student Chapter
-          </h1>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Side - Illustration */}
+            <div className={`relative transition-all duration-1200 delay-400 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+              {/* Main Character Circle */}
+              <div className="relative w-96 h-96 mx-auto">
+                {/* Green organic shape background */}
+                <div className="absolute inset-8 bg-gradient-to-br from-green-100 to-green-200 rounded-full transform rotate-12 animate-pulse"></div>
+                
+                {/* CSI Logo replacing the entire circle */}
+                <div className="absolute inset-12 flex items-center justify-center">
+                  <img 
+                    src="/csilogo.jpg" 
+                    alt="CSI Logo" 
+                    className="w-full h-full object-contain rounded-full shadow-2xl"
+                  />
+                </div>
 
-          {/* Underline - Elegant scale animation */}
-          <div className={`w-48 h-1 mx-auto mb-8 transition-all duration-1000 delay-800 ease-out transform ${isLoaded ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`} style={{ backgroundColor: '#00A9E0' }}></div>
+                {/* Floating Tech Icons */}
+                <div className={`absolute -top-4 left-8 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center transition-all duration-1000 delay-800 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 -translate-y-4 rotate-12'}`}>
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg"></div>
+                </div>
+                
+                <div className={`absolute top-16 -right-4 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center transition-all duration-1000 delay-1000 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 -translate-y-4 -rotate-12'}`}>
+                  <div className="w-6 h-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full"></div>
+                </div>
+                
+                <div className={`absolute bottom-20 -left-6 w-18 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center transition-all duration-1000 delay-1200 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-4 rotate-6'}`}>
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  </div>
+                </div>
+                
+                <div className={`absolute -bottom-2 right-12 w-16 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center transition-all duration-1000 delay-1400 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-4 -rotate-6'}`}>
+                  <div className="w-8 h-2 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"></div>
+                </div>
 
-          {/* Subtitle - Delayed smooth entrance */}
-          <p className={`text-lg md:text-xl text-blue-100 mb-12 max-w-3xl mx-auto transition-all duration-1200 delay-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Empowering Innovation & Technology Excellence. Join us in exploring the world of technology and innovation.
-          </p>
+                <div className={`absolute top-32 left-2 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center transition-all duration-1000 delay-600 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 -translate-y-4 rotate-45'}`}>
+                  <div className="text-green-500 font-bold text-lg">💬</div>
+                </div>
+              </div>
+            </div>
 
-          {/* Join Button - Final element with bounce effect */}
-          <div className={`transition-all duration-1000 delay-1400 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
-            <button 
-              className="px-12 py-4 text-lg font-bold text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 group"
-              style={{ 
-                background: 'linear-gradient(135deg, #A1FFCE, #00C9FF, #A1FFCE)',
-                boxShadow: '0 8px 25px rgba(0, 201, 255, 0.25)',
-                backdropFilter: 'blur(10px)',
-                WebkitBackdropFilter: 'blur(10px)'
-              }}
-            >
-              <span className="relative z-10">Join CSI</span>
-              <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-            </button>
+            {/* Right Side - Content */}
+            <div className={`space-y-8 transition-all duration-1200 delay-600 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+              {/* CSI Logo/Brand */}
+              <div className="space-y-2">
+                <div className="text-4xl font-bold" style={{ color: '#4CAF50' }}>
+                  CSI
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#1e3a8a' }}>
+                  Student Chapter
+                </h1>
+              </div>
+
+              {/* Tagline */}
+              <div className="space-y-4">
+                <p className="text-xl text-gray-600 italic">
+                  "Empowering Innovation & Technology Excellence"
+                </p>
+              </div>
+
+              {/* Description */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
+                <p className="text-gray-700 leading-relaxed">
+                  Computer Society of India (CSI) is the largest body of computer professionals in India. 
+                  Our student chapter is dedicated to fostering innovation, technical excellence, and 
+                  professional development among aspiring technologists. We work towards building a 
+                  strong community of computing professionals through skill-building, networking, and empowerment.
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <div className={`transition-all duration-1000 delay-1400 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
+                <button 
+                  className="px-8 py-4 text-lg font-bold text-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
+                  style={{ 
+                    background: 'linear-gradient(135deg, #3b82f6, #1e40af)',
+                  }}
+                >
+                  Join CSI
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
