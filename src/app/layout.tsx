@@ -50,13 +50,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
-          {/* Non-sticky Header */}
-          <header className="text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
-            <div className="container mx-auto px-4 py-6">
-              {/* Desktop Header Layout - Logo and Title Together */}
-              <div className="hidden md:flex items-center justify-center">
-                <div className="flex items-center gap-4">
-                  <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+          {/* Streamlined Navigation Bar */}
+          <nav className="sticky top-0 z-50 bg-white shadow-lg border-b-2" style={{ borderColor: '#00A9E0' }}>
+            <div className="container mx-auto px-4">
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center justify-between py-4">
+                {/* Logo and Title */}
+                <div className="flex items-center gap-3">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                     <Image
                       src="/csilogo.jpg"
                       alt="CSI Logo"
@@ -64,18 +65,71 @@ export default function RootLayout({
                       className="object-contain"
                     />
                   </div>
-                  <div className="text-left">
-                    <h2 className="text-2xl font-bold leading-tight">Computer Society of India</h2>
-                    <p className="text-lg opacity-90 leading-tight">SSN College of Engineering</p>
-                  </div>
+                </div>
+
+                {/* Navigation Links */}
+                <div className="flex space-x-6">
+                  <a 
+                    href="/" 
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      currentPage === 'home' 
+                        ? 'text-white font-semibold shadow-md' 
+                        : 'hover:bg-gray-100'
+                    }`}
+                    style={currentPage === 'home' ? { 
+                      background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                    } : { color: '#005191' }}
+                  >
+                    Home
+                  </a>
+                  <a 
+                    href="/info" 
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      currentPage === 'info' 
+                        ? 'text-white font-semibold shadow-md' 
+                        : 'hover:bg-gray-100'
+                    }`}
+                    style={currentPage === 'info' ? { 
+                      background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                    } : { color: '#005191' }}
+                  >
+                    Info
+                  </a>
+                  <a 
+                    href="/team" 
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      currentPage === 'team' 
+                        ? 'text-white font-semibold shadow-md' 
+                        : 'hover:bg-gray-100'
+                    }`}
+                    style={currentPage === 'team' ? { 
+                      background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                    } : { color: '#005191' }}
+                  >
+                    Team
+                  </a>
+                  <a 
+                    href="/contact" 
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      currentPage === 'contact' 
+                        ? 'text-white font-semibold shadow-md' 
+                        : 'hover:bg-gray-100'
+                    }`}
+                    style={currentPage === 'contact' ? { 
+                      background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                    } : { color: '#005191' }}
+                  >
+                    Contact Us
+                  </a>
                 </div>
               </div>
 
-              {/* Mobile Header Layout - Logo and Title Together */}
+              {/* Mobile Navigation */}
               <div className="md:hidden">
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-between py-3">
+                  {/* Mobile Logo and Title */}
                   <div className="flex items-center gap-3">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                       <Image
                         src="/csilogo.jpg"
                         alt="CSI Logo"
@@ -83,271 +137,89 @@ export default function RootLayout({
                         className="object-contain"
                       />
                     </div>
-                    <div className="text-left">
-                      <h2 className="text-xl font-bold leading-tight">Computer Society of India</h2>
-                      <p className="text-base opacity-90 leading-tight">SSN College of Engineering</p>
+                  </div>
+
+                  {/* Mobile Menu Toggle */}
+                  <button
+                    onClick={toggleMenu}
+                    className="p-2 rounded-lg transition-all duration-300"
+                    style={{ color: '#005191' }}
+                    aria-label="Toggle menu"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {isMenuOpen ? (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      ) : (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                      )}
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Mobile Navigation Menu */}
+                {isMenuOpen && (
+                  <div className="pb-4 border-t border-gray-200">
+                    <div className="flex flex-col space-y-2 pt-4">
+                      <a 
+                        href="/" 
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
+                          currentPage === 'home' 
+                            ? 'text-white font-semibold shadow-md' 
+                            : 'hover:bg-gray-100'
+                        }`}
+                        style={currentPage === 'home' ? { 
+                          background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                        } : { color: '#005191' }}
+                      >
+                        Home
+                      </a>
+                      <a 
+                        href="/info" 
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
+                          currentPage === 'info' 
+                            ? 'text-white font-semibold shadow-md' 
+                            : 'hover:bg-gray-100'
+                        }`}
+                        style={currentPage === 'info' ? { 
+                          background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                        } : { color: '#005191' }}
+                      >
+                        Info
+                      </a>
+                      <a 
+                        href="/team" 
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
+                          currentPage === 'team' 
+                            ? 'text-white font-semibold shadow-md' 
+                            : 'hover:bg-gray-100'
+                        }`}
+                        style={currentPage === 'team' ? { 
+                          background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                        } : { color: '#005191' }}
+                      >
+                        Team
+                      </a>
+                      <a 
+                        href="/contact" 
+                        onClick={() => setIsMenuOpen(false)}
+                        className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
+                          currentPage === 'contact' 
+                            ? 'text-white font-semibold shadow-md' 
+                            : 'hover:bg-gray-100'
+                        }`}
+                        style={currentPage === 'contact' ? { 
+                          background: 'linear-gradient(135deg, #005191, #00A9E0)',
+                        } : { color: '#005191' }}
+                      >
+                        Contact Us
+                      </a>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
-            </div>
-          </header>
-
-          {/* Sticky Navigation Bar */}
-          <nav className="sticky top-0 z-50 text-white shadow-md" style={{ background: 'linear-gradient(to right, #005191, #00A9E0)' }}>
-            <div className="container mx-auto px-4">
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex justify-center py-4">
-                <div className="flex space-x-8">
-                  <a 
-                    href="/" 
-                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                      currentPage === 'home' 
-                        ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                        : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                    }`}
-                    style={currentPage === 'home' ? { 
-                      background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                      backdropFilter: 'blur(10px)'
-                    } : {}}
-                    onMouseEnter={(e) => {
-                      if (currentPage !== 'home') {
-                        (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                        (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (currentPage !== 'home') {
-                        (e.target as HTMLElement).style.background = '';
-                        (e.target as HTMLElement).style.backdropFilter = '';
-                      }
-                    }}
-                  >
-                    Home
-                  </a>
-                  <a 
-                    href="/info" 
-                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                      currentPage === 'info' 
-                        ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                        : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                    }`}
-                    style={currentPage === 'info' ? { 
-                      background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                      backdropFilter: 'blur(10px)'
-                    } : {}}
-                    onMouseEnter={(e) => {
-                      if (currentPage !== 'info') {
-                        (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                        (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (currentPage !== 'info') {
-                        (e.target as HTMLElement).style.background = '';
-                        (e.target as HTMLElement).style.backdropFilter = '';
-                      }
-                    }}
-                  >
-                    Info
-                  </a>
-                  <a 
-                    href="/team" 
-                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                      currentPage === 'team' 
-                        ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                        : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                    }`}
-                    style={currentPage === 'team' ? { 
-                      background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                      backdropFilter: 'blur(10px)'
-                    } : {}}
-                    onMouseEnter={(e) => {
-                      if (currentPage !== 'team') {
-                        (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                        (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (currentPage !== 'team') {
-                        (e.target as HTMLElement).style.background = '';
-                        (e.target as HTMLElement).style.backdropFilter = '';
-                      }
-                    }}
-                  >
-                    Team
-                  </a>
-                  <a 
-                    href="/contact" 
-                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                      currentPage === 'contact' 
-                        ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                        : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                    }`}
-                    style={currentPage === 'contact' ? { 
-                      background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                      backdropFilter: 'blur(10px)'
-                    } : {}}
-                    onMouseEnter={(e) => {
-                      if (currentPage !== 'contact') {
-                        (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                        (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (currentPage !== 'contact') {
-                        (e.target as HTMLElement).style.background = '';
-                        (e.target as HTMLElement).style.backdropFilter = '';
-                      }
-                    }}
-                  >
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-
-              {/* Mobile Navigation Toggle */}
-              <div className="md:hidden flex justify-center py-3">
-                <button
-                  onClick={toggleMenu}
-                  className="px-4 py-3 rounded-full font-medium text-white transition-all duration-300 transform hover:scale-105 shadow-md backdrop-blur-md border border-white border-opacity-30 hover:shadow-lg"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))',
-                    backdropFilter: 'blur(10px)'
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                  }}
-                  aria-label="Toggle menu"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {isMenuOpen ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    )}
-                  </svg>
-                </button>
-              </div>
-
-              {/* Mobile Navigation Menu */}
-              {isMenuOpen && (
-                <div className="md:hidden pb-4">
-                  <div className="flex flex-col space-y-2">
-                    <a 
-                      href="/" 
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block px-6 py-4 rounded-xl font-medium text-center transition-all duration-300 ${
-                        currentPage === 'home' 
-                          ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                          : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                      }`}
-                      style={currentPage === 'home' ? { 
-                        background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                        backdropFilter: 'blur(10px)'
-                      } : {}}
-                      onMouseEnter={(e) => {
-                        if (currentPage !== 'home') {
-                          (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                          (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (currentPage !== 'home') {
-                          (e.target as HTMLElement).style.background = '';
-                          (e.target as HTMLElement).style.backdropFilter = '';
-                        }
-                      }}
-                    >
-                      Home
-                    </a>
-                    <a 
-                      href="/info" 
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block px-6 py-4 rounded-xl font-medium text-center transition-all duration-300 ${
-                        currentPage === 'info' 
-                          ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                          : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                      }`}
-                      style={currentPage === 'info' ? { 
-                        background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                        backdropFilter: 'blur(10px)'
-                      } : {}}
-                      onMouseEnter={(e) => {
-                        if (currentPage !== 'info') {
-                          (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                          (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (currentPage !== 'info') {
-                          (e.target as HTMLElement).style.background = '';
-                          (e.target as HTMLElement).style.backdropFilter = '';
-                        }
-                      }}
-                    >
-                      Info
-                    </a>
-                    <a 
-                      href="/team" 
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block px-6 py-4 rounded-xl font-medium text-center transition-all duration-300 ${
-                        currentPage === 'team' 
-                          ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                          : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                      }`}
-                      style={currentPage === 'team' ? { 
-                        background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                        backdropFilter: 'blur(10px)'
-                      } : {}}
-                      onMouseEnter={(e) => {
-                        if (currentPage !== 'team') {
-                          (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                          (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (currentPage !== 'team') {
-                          (e.target as HTMLElement).style.background = '';
-                          (e.target as HTMLElement).style.backdropFilter = '';
-                        }
-                      }}
-                    >
-                      Team
-                    </a>
-                    <a 
-                      href="/contact" 
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`block px-6 py-4 rounded-xl font-medium text-center transition-all duration-300 ${
-                        currentPage === 'contact' 
-                          ? 'text-white font-semibold shadow-lg backdrop-blur-md border border-white border-opacity-30' 
-                          : 'text-white hover:backdrop-blur-md hover:shadow-md border border-transparent hover:border-white hover:border-opacity-30'
-                      }`}
-                      style={currentPage === 'contact' ? { 
-                        background: 'linear-gradient(135deg, rgba(0, 81, 145, 0.3), rgba(0, 169, 224, 0.3))',
-                        backdropFilter: 'blur(10px)'
-                      } : {}}
-                      onMouseEnter={(e) => {
-                        if (currentPage !== 'contact') {
-                          (e.target as HTMLElement).style.background = 'linear-gradient(135deg, rgba(0, 81, 145, 0.2), rgba(0, 169, 224, 0.2))';
-                          (e.target as HTMLElement).style.backdropFilter = 'blur(10px)';
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (currentPage !== 'contact') {
-                          (e.target as HTMLElement).style.background = '';
-                          (e.target as HTMLElement).style.backdropFilter = '';
-                        }
-                      }}
-                    >
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-              )}
             </div>
           </nav>
 
