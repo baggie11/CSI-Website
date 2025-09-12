@@ -18,7 +18,7 @@ export default function TeamMembers() {
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold mb-4" style={{ color: '#2D2D2D' }}>Meet Our Amazing Team!</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet the dedicated students who make the CSI Student Chapter at SSN a thriving community for technology enthusiasts.
+            Meet the dedicated team who make the CSI Student Chapter at SSN a thriving community for technology enthusiasts.
           </p>
         </div>
 
