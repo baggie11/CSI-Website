@@ -28,6 +28,14 @@ const teams :  Team[] = [
             },
             {
                 id : 2,
+                name : "Vijay Srinivas",
+                role : "Vice President",
+                dept : "Computer Science",
+                year : "IV Year",
+                image : "images/team/office/Vijay.png"
+            },
+            {
+                id : 3,
                 name : "Darshan Parthasarathy",
                 role : "Secretary",
                 dept : "Computer Science",
@@ -58,10 +66,11 @@ const teams :  Team[] = [
             },
             {
                 id : 3,
-                name : "Guntimadugu Kushal Varma",
+                name : "Arthi",
                 role : "Design Team Member",
-                dept : "Computer Science",
-                year : "IV Year",
+                dept : "EEE",
+                year : "III Year",
+                image : "images/team/design/arthi.png",
             },
             {
                 id : 4,
@@ -80,11 +89,11 @@ const teams :  Team[] = [
             },
             {
                 id : 6,
-                name : "Arthi",
+                name : "Kanagalakshmi A",
                 role : "Design Team Member",
-                dept : "EEE",
-                year : "III Year",
-                image : "images/team/design/arthi.png",
+                dept : "Computer Science",
+                year : "II Year",
+                image : "images/team/design/kanagalakshmi.png"
             },
             {
                 id : 7,
@@ -93,6 +102,14 @@ const teams :  Team[] = [
                 dept : "Computer Science",
                 year : "II Year",
                 image : "images/team/design/shreevishali.png",
+            },
+            {
+                id : 8,
+                name : "Abdiel A. Samuel Magdi",
+                role : "Design Team Member",
+                dept : "Computer Science",
+                year : "II Year",
+                image : "images/team/design/abdiel.png",
             }
         ]
     },
@@ -154,6 +171,14 @@ const teams :  Team[] = [
                 dept : "Computer Science",
                 year : "III Year",
                 image : "images/team/event/jaswanth.png",
+            },
+            {
+                id : 8,
+                name : "Akshaya T",
+                role : "Event Management Team Member",
+                dept : "Computer Science",
+                year : "II Year",
+                image : "images/team/event/akshayat.png"
             }
         ]
     },
@@ -240,22 +265,6 @@ const teams :  Team[] = [
             },
             {
                 id : 3,
-                name : "Felicia Jenny",
-                role : "PR Team Member",
-                dept : "EEE",
-                year : "III Year",
-                image : "images/team/pr/felicia.png",
-            },
-            {
-                id : 4,
-                name : "Gopika Ganesan",
-                role : "PR Team Member",
-                dept : "M.Tech Computer Science",
-                year : "III Year",
-                image : "images/team/pr/gopika.png",
-            },
-            {
-                id : 5,
                 name : "Varun Prakash",
                 role : "PR Team Member",
                 dept : "Computer Science",
@@ -263,7 +272,7 @@ const teams :  Team[] = [
                 image : "images/team/pr/varun.png",
             },
             {
-                id : 6,
+                id : 4,
                 name : "Jeya Sangavi R",
                 role : "PR Team Member",
                 dept : "Information Technology",
@@ -271,12 +280,20 @@ const teams :  Team[] = [
                 image : "images/team/pr/jeya.png",
             },
             {
-                id : 7,
+                id : 5,
                 name : "Gautham Narayan G",
                 role : "PR Team Member",
                 dept : "Computer Science",
                 year : "III Year",
                 image : "images/team/pr/gautham.png",
+            },
+            {
+                id : 6,
+                name : "Samyuktha S",
+                role : "PR Team Member",
+                dept : "Mechanical",
+                year : "II Year",
+                image : "images/team/pr/samyuktha.png"
             }
         ]
     },

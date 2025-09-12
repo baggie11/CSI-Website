@@ -54,7 +54,7 @@ function TeamSection({ team }: TeamSectionProps) {
   }
 
   // For Office Bearers with only 2 members, center them with custom spacing
-  if (team.id === 2 && team.members.length === 2) {
+  if (team.id === 2 && team.members.length === 3) {
     return (
       <div className="mb-12">
         <h3 className="text-xl font-bold mb-6 text-center" style={{ color: '#005191' }}>
