@@ -254,6 +254,7 @@ const teams :  Team[] = [
                 role : "PR Head",
                 dept : "Information Technology",
                 year : "IV Year",
+                image : "images/team/pr/sai.png"
             },
             {
                 id : 2,
@@ -294,6 +295,38 @@ const teams :  Team[] = [
                 dept : "Mechanical",
                 year : "II Year",
                 image : "images/team/pr/samyuktha.png"
+            },
+            {
+                id : 7,
+                name : "Jeevan",
+                role : "PR Team Member",
+                dept : "Chemical",
+                year : "II Year",
+                image : "images/team/pr/jeevan.png"
+            },
+            {
+                id : 8,
+                name : "Aaditya R",
+                role : "PR Team Member",
+                dept : "ECE",
+                year : "II Year",
+                image : "images/team/pr/aaditya.png"
+            },
+            {
+                id : 9,
+                name : "Sabariesh M",
+                role : "PR Team Member",
+                dept : "EEE",
+                year : "II Year",
+                image : "images/team/pr/sabariesh.png"
+            },
+            {
+                id : 10,
+                name : "Sahiditya",
+                role : "PR Team Member",
+                dept : "Civil",
+                year : "II Year",
+                image : "images/team/pr/sahiditya.png"
             }
         ]
     },
