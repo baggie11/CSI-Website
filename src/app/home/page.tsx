@@ -112,14 +112,14 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className={`transition-all duration-1000 delay-1400 ease-out transform ${isLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
-                <button 
+                <a href = "https://www.instagram.com/csi_ssn?igsh=MTE2MXlqMXA2c2ZoaA"><button 
                   className="px-8 py-4 text-lg font-bold text-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
                   style={{ 
                     background: 'linear-gradient(135deg, #3b82f6, #1e40af)',
                   }}
                 >
                   Join CSI
-                </button>
+                </button></a>
               </div>
             </div>
 
@@ -348,16 +348,16 @@ export default function Home() {
               Unlock opportunities, build connections, and grow with us.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button 
+              <a href = "https://www.instagram.com/csi_ssn?igsh=MTE2MXlqMXA2c2ZoaA"><button 
                 className="px-10 py-4 bg-white text-blue-700 font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
               >
                 Become a Member
-              </button>
-              <button 
+              </button></a>
+              <a href = "/contact"><button 
                 className="px-10 py-4 border-2 border-white font-bold rounded-xl hover:bg-white hover:text-blue-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
               >
                 Contact Us
-              </button>
+              </button></a>
             </div>
           </div>
         </div>

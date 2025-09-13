@@ -372,9 +372,6 @@ const Page = () => {
               >
                 Get in Touch
               </a>
-              <button className="px-6 sm:px-8 py-3 border-2 border-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
-                Learn More
-              </button>
             </div>
           </div>
         </div>

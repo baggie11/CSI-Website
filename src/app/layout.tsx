@@ -235,7 +235,7 @@ export default function RootLayout({
               <div className="flex justify-center space-x-4 mb-4">
                 {/* Instagram */}
                 <a 
-                  href="https://www.instagram.com" 
+                  href="https://www.instagram.com/csi_ssn?igsh=MTE2MXlqMXA2c2ZoaA" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 rounded-full bg-white transition-all duration-300 transform hover:scale-110"
