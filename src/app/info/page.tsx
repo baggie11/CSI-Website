@@ -160,7 +160,7 @@ const Page = () => {
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4 sm:p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed font-medium italic">
-                  "To be the premier student organization that empowers future technologists through innovation, collaboration, and excellence in computer science education."
+                  &quot;To be the premier student organization that empowers future technologists through innovation, collaboration, and excellence in computer science education.&quot;
                 </p>
               </div>
               <div>
@@ -192,7 +192,7 @@ const Page = () => {
               </div>
               <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-lg p-4 sm:p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed font-medium italic">
-                  "To foster a dynamic learning environment that enhances technical skills, promotes professional development, and creates meaningful industry connections for our student community."
+                  &quot;To foster a dynamic learning environment that enhances technical skills, promotes professional development, and creates meaningful industry connections for our student community.&quot;
                 </p>
               </div>
               <div>
@@ -312,7 +312,7 @@ const Page = () => {
                 Achievements & Recognition
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                Celebrating our milestones and the impact we've made in the academic and professional community
+                Celebrating our milestones and the impact we&apos;ve made in the academic and professional community
               </p>
             </div>
             
@@ -363,7 +363,7 @@ const Page = () => {
               Ready to Join Our Journey?
             </h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Be part of a community that's shaping the future of technology. Connect with like-minded peers, access exclusive opportunities, and accelerate your professional growth.
+              Be part of a community that&apos;s shaping the future of technology. Connect with like-minded peers, access exclusive opportunities, and accelerate your professional growth.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:space-x-4 sm:gap-0">
               <a 

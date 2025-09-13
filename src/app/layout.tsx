@@ -5,6 +5,7 @@ import "./globals.css";
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,7 +70,7 @@ export default function RootLayout({
 
                 {/* Navigation Links */}
                 <div className="flex space-x-6">
-                  <a 
+                  <Link 
                     href="/" 
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       currentPage === 'home' 
@@ -81,8 +82,8 @@ export default function RootLayout({
                     } : { color: '#005191' }}
                   >
                     Home
-                  </a>
-                  <a 
+                  </Link>
+                  <Link 
                     href="/info" 
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       currentPage === 'info' 
@@ -94,8 +95,8 @@ export default function RootLayout({
                     } : { color: '#005191' }}
                   >
                     Info
-                  </a>
-                  <a 
+                  </Link>
+                  <Link 
                     href="/team" 
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       currentPage === 'team' 
@@ -107,8 +108,8 @@ export default function RootLayout({
                     } : { color: '#005191' }}
                   >
                     Team
-                  </a>
-                  <a 
+                  </Link>
+                  <Link 
                     href="/contact" 
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       currentPage === 'contact' 
@@ -120,7 +121,7 @@ export default function RootLayout({
                     } : { color: '#005191' }}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -160,7 +161,7 @@ export default function RootLayout({
                 {isMenuOpen && (
                   <div className="pb-4 border-t border-gray-200">
                     <div className="flex flex-col space-y-2 pt-4">
-                      <a 
+                      <Link 
                         href="/" 
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
@@ -173,8 +174,8 @@ export default function RootLayout({
                         } : { color: '#005191' }}
                       >
                         Home
-                      </a>
-                      <a 
+                      </Link>
+                      <Link 
                         href="/info" 
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
@@ -187,8 +188,8 @@ export default function RootLayout({
                         } : { color: '#005191' }}
                       >
                         Info
-                      </a>
-                      <a 
+                      </Link>
+                      <Link 
                         href="/team" 
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
@@ -201,8 +202,8 @@ export default function RootLayout({
                         } : { color: '#005191' }}
                       >
                         Team
-                      </a>
-                      <a 
+                      </Link>
+                      <Link 
                         href="/contact" 
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 rounded-lg font-medium text-center transition-all duration-300 ${
@@ -215,7 +216,7 @@ export default function RootLayout({
                         } : { color: '#005191' }}
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 )}
