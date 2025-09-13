@@ -1,5 +1,5 @@
 //team data
-import { Team } from "./types";
+import { Team } from "../types";
 
 const teams :  Team[] = [
     {

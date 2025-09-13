@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Users, Award, Code, ArrowRight, MapPin, Clock } from 'lucide-react';
+import EventCard from '@/components/EventCard';
+import { events } from '@/data/events';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -125,7 +127,7 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="px-6 py-16">
+       <main className="px-6 py-16">
         {/* About CSI Section */}
         <div className={`max-w-6xl mx-auto mb-20 transition-all duration-1000 delay-200 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}>
           <div className="text-center mb-16">
@@ -148,134 +150,45 @@ export default function Home() {
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
                 <Users className="text-white" size={32} />
               </div>
-              <h3 className="text-3xl font-bold mb-2" style={{ color: '#005191' }}>500+</h3>
-              <p className="text-gray-600 font-medium">Active Members</p>
+
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
                 <Calendar className="text-white" size={32} />
               </div>
-              <h3 className="text-3xl font-bold mb-2" style={{ color: '#005191' }}>25+</h3>
-              <p className="text-gray-600 font-medium">Events Organized</p>
+
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
                 <Award className="text-white" size={32} />
               </div>
-              <h3 className="text-3xl font-bold mb-2" style={{ color: '#005191' }}>15+</h3>
-              <p className="text-gray-600 font-medium">Awards Won</p>
+
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
                 <Code className="text-white" size={32} />
               </div>
-              <h3 className="text-3xl font-bold mb-2" style={{ color: '#005191' }}>100+</h3>
-              <p className="text-gray-600 font-medium">Projects Completed</p>
+
             </div>
           </div>
         </div>
 
-        {/* Upcoming Events Section */}
         <div className={`max-w-6xl mx-auto mb-20 transition-all duration-1000 delay-600 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}>
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4" style={{ color: '#005191' }}>
-              Upcoming Events
-            </h3>
-            <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: '#00A9E0' }}></div>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Don't miss out on our exciting upcoming events and workshops designed to enhance your technical skills
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Event Card 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="h-56 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 relative">
-                <div className="absolute inset-0 bg-black/20"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <Calendar size={16} className="mr-2" />
-                  <span>September 15, 2025</span>
-                </div>
-                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  AI/ML Workshop
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Hands-on workshop on machine learning fundamentals and practical applications
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mb-6">
-                  <MapPin size={16} className="mr-2" />
-                  <span>Tech Auditorium, CSE Block</span>
-                </div>
-                <button 
-                  className="w-full py-3 px-4 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #005191, #00A9E0)' }}
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-
-            {/* Event Card 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="h-56 bg-gradient-to-br from-green-500 via-teal-600 to-blue-500 relative">
-                <div className="absolute inset-0 bg-black/20"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <Calendar size={16} className="mr-2" />
-                  <span>September 22, 2025</span>
-                </div>
-                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  Code Symphony 2025
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Annual coding competition featuring algorithmic challenges and prizes
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mb-6">
-                  <MapPin size={16} className="mr-2" />
-                  <span>Main Auditorium</span>
-                </div>
-                <button 
-                  className="w-full py-3 px-4 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #005191, #00A9E0)' }}
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-
-            {/* Event Card 3 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="h-56 bg-gradient-to-br from-orange-500 via-red-600 to-purple-500 relative">
-                <div className="absolute inset-0 bg-black/20"></div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <Calendar size={16} className="mr-2" />
-                  <span>October 5, 2025</span>
-                </div>
-                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  Tech Talk Series
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Industry experts sharing insights on emerging technologies and career paths
-                </p>
-                <div className="flex items-center text-sm text-gray-500 mb-6">
-                  <MapPin size={16} className="mr-2" />
-                  <span>Conference Hall</span>
-                </div>
-                <button 
-                  className="w-full py-3 px-4 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #005191, #00A9E0)' }}
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
+      <div className="text-center mb-12">
+        <h3 className="text-4xl font-bold mb-4" style={{ color: '#005191' }}>
+          Upcoming Events
+        </h3>
+        <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: '#00A9E0' }}></div>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Don't miss out on our exciting upcoming events and workshops designed to enhance your technical skills
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {events.map((event) => (
+          <EventCard key={event.id} event={event} />
+        ))}
+      </div>
           <div className="text-center mt-12">
             <button 
               className="px-8 py-4 border-2 font-medium rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center mx-auto" 
@@ -358,48 +271,75 @@ export default function Home() {
               <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#005191' }}>
                 <div className="flex items-center text-sm text-gray-500 mb-3">
                   <Clock size={16} className="mr-2" />
-                  <span>September 8, 2025</span>
+                  <span>September 15, 2025</span>
                 </div>
                 <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  New Membership Drive 2025
+                  Path Finder
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
-                  We are excited to announce the opening of our annual membership drive. Join CSI and become part of India's largest computer professionals community.
+                  The qualifying teams will compete by racing from a given start page to a target page on Wikipedia using only in-page links.
+
                 </p>
               </div>
-              
-              <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#00A9E0' }}>
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <Clock size={16} className="mr-2" />
-                  <span>September 5, 2025</span>
-                </div>
-                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  CSI Technical Fest Results
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  Congratulations to all participants and winners of our recent technical fest. The event saw record participation with innovative projects showcased.
-                </p>
-              </div>
-              
               <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#005191' }}>
                 <div className="flex items-center text-sm text-gray-500 mb-3">
                   <Clock size={16} className="mr-2" />
-                  <span>September 1, 2025</span>
+                  <span>September 15, 2025</span>
                 </div>
                 <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
-                  Industry Partnership Announcement
+                  Code Relay
                 </h4>
                 <p className="text-gray-600 leading-relaxed">
-                  CSI Student Chapter has partnered with leading tech companies to provide internship opportunities and industry exposure to our members.
+                  Teams will be shown a pattern and must write code to generate it.
+
                 </p>
               </div>
+              <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#005191' }}>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock size={16} className="mr-2" />
+                  <span>September 15, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
+                  Connexion
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  Teams will identify technical words represented through images.
+
+                </p>
+              </div>
+              <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#005191' }}>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock size={16} className="mr-2" />
+                  <span>September 15, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
+                  SSN CSI Inauguration
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  
+                </p>
+              </div>
+               <div className="border-l-4 pl-8 py-6 hover:bg-gray-50 transition-all duration-300 rounded-r-lg" style={{ borderColor: '#005191' }}>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock size={16} className="mr-2" />
+                  <span>September 8, 2025</span>
+                </div>
+                <h4 className="text-xl font-bold mb-3" style={{ color: '#005191' }}>
+                  Team Reveal at ACE Inauguration
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  
+                </p>
+              </div>
+              
+             
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 delay-1200 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}>
-          <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-2xl p-12 text-white shadow-2xl">
+          <div className="bg-gradient-to-br from-[#005191] via-[#0073b1] to-[#0096d6] rounded-2xl p-12 text-white shadow-2xl">
             <h3 className="text-4xl font-bold mb-6">
               Ready to Join Our Community?
             </h3>

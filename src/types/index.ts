@@ -13,3 +13,11 @@ export interface Team {
   name: string;
   members: Member[];
 }
+
+export interface Events {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  location: string;
+}
