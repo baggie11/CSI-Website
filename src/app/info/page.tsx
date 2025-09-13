@@ -20,37 +20,39 @@ const Page = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <div className="lg:col-span-2">
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  [CSI_NATIONAL_OVERVIEW_PLACEHOLDER] - Founded in 1965, the Computer Society of India (CSI) stands as the premier body of computer professionals in India, dedicated to advancing the theory and practice of computer science and information technology.
+                  Founded in 1965, the Computer Society of India (CSI) stands as the premier body of computer professionals in India, dedicated to advancing the theory and practice of computer science and information technology.
                 </p>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  [CSI_IMPACT_DESCRIPTION_PLACEHOLDER] - With over five decades of excellence, CSI has been instrumental in shaping India's IT landscape through education, certification, and professional development programs.
+                  With over five decades of excellence, CSI has been instrumental in shaping India's IT landscape through education, certification, and professional development programs.
                 </p>
+
+
                 
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 sm:p-6">
                   <h4 className="font-bold mb-3" style={{ color: '#005191' }}>Key Focus Areas</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="flex items-center">
                       <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#005191' }}></div>
-                      <span className="text-sm text-gray-700">[FOCUS_AREA_1_PLACEHOLDER]</span>
+                      <span className="text-sm text-gray-700">Professional Development & Education</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#00A9E0' }}></div>
-                      <span className="text-sm text-gray-700">[FOCUS_AREA_2_PLACEHOLDER]</span>
+                      <span className="text-sm text-gray-700">Research & Innovation</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#005191' }}></div>
-                      <span className="text-sm text-gray-700">[FOCUS_AREA_3_PLACEHOLDER]</span>
+                      <span className="text-sm text-gray-700">Industry-Academia Collaboration</span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#00A9E0' }}></div>
-                      <span className="text-sm text-gray-700">[FOCUS_AREA_4_PLACEHOLDER]</span>
+                      <span className="text-sm text-gray-700">Student Engagement</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div>
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-4 sm:p-6 text-white">
+                <div className="bg-gradient-to-br from-[#005191] via-[#0073b1] to-[#0096d6] rounded-lg p-4 sm:p-6 text-white">
                   <h4 className="text-lg font-bold mb-4">CSI by Numbers</h4>
                   <div className="space-y-4">
                     <div className="text-center">
@@ -96,9 +98,9 @@ const Page = () => {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold mb-2" style={{ color: '#005191' }}>Chapter Establishment</h3>
-                    <p className="text-gray-500 text-sm mb-3">Founded in [CHAPTER_YEAR]</p>
+                    <p className="text-gray-500 text-sm mb-3">Founded in 2025</p>
                     <p className="text-gray-600 leading-relaxed">
-                      [CHAPTER_FOUNDATION_STORY_PLACEHOLDER] - Our journey began with a vision to bridge the gap between academic learning and industry requirements, creating opportunities for students to excel in the rapidly evolving field of computer science.
+                      Our journey began with a vision to bridge the gap between academic learning and industry requirements, creating opportunities for students to excel in the rapidly evolving field of computer science.
                     </p>
                   </div>
                 </div>
@@ -108,21 +110,21 @@ const Page = () => {
                     <Calendar className="text-blue-600 mr-3 flex-shrink-0" size={20} />
                     <div>
                       <h4 className="font-semibold text-sm" style={{ color: '#005191' }}>Established</h4>
-                      <p className="text-gray-600 text-sm">[ESTABLISHMENT_DATE_PLACEHOLDER]</p>
+                      <p className="text-gray-600 text-sm">August 15, 2010</p>
                     </div>
                   </div>
                   <div className="flex items-center p-4 bg-teal-50 rounded-lg">
                     <Users className="text-teal-600 mr-3 flex-shrink-0" size={20} />
                     <div>
                       <h4 className="font-semibold text-sm" style={{ color: '#005191' }}>Founding Members</h4>
-                      <p className="text-gray-600 text-sm">[FOUNDING_MEMBERS_PLACEHOLDER] pioneer students</p>
+                      <p className="text-gray-600 text-sm">43 pioneer students</p>
                     </div>
                   </div>
                   <div className="flex items-center p-4 bg-purple-50 rounded-lg">
                     <Trophy className="text-purple-600 mr-3 flex-shrink-0" size={20} />
                     <div>
                       <h4 className="font-semibold text-sm" style={{ color: '#005191' }}>First Milestone</h4>
-                      <p className="text-gray-600 text-sm">[FIRST_MILESTONE_PLACEHOLDER]</p>
+                      <p className="text-gray-600 text-sm">CSI Inauguration</p>
                     </div>
                   </div>
                 </div>
@@ -134,31 +136,11 @@ const Page = () => {
                   <div className="relative pl-6 border-l-2" style={{ borderColor: '#005191' }}>
                     <div className="absolute w-3 h-3 rounded-full -left-2 top-1" style={{ backgroundColor: '#005191' }}></div>
                     <div className="pb-4">
-                      <div className="font-semibold text-sm" style={{ color: '#005191' }}>[MILESTONE_YEAR_1] - Foundation</div>
-                      <div className="text-gray-600 text-sm">[MILESTONE_DESCRIPTION_1_PLACEHOLDER]</div>
+                      <div className="font-semibold text-sm" style={{ color: '#005191' }}>2025 - Foundation</div>
+                      <div className="text-gray-600 text-sm">Chapter established with inaugural event</div>
                     </div>
                   </div>
-                  <div className="relative pl-6 border-l-2" style={{ borderColor: '#00A9E0' }}>
-                    <div className="absolute w-3 h-3 rounded-full -left-2 top-1" style={{ backgroundColor: '#00A9E0' }}></div>
-                    <div className="pb-4">
-                      <div className="font-semibold text-sm" style={{ color: '#005191' }}>[MILESTONE_YEAR_2] - Growth</div>
-                      <div className="text-gray-600 text-sm">[MILESTONE_DESCRIPTION_2_PLACEHOLDER]</div>
-                    </div>
-                  </div>
-                  <div className="relative pl-6 border-l-2" style={{ borderColor: '#005191' }}>
-                    <div className="absolute w-3 h-3 rounded-full -left-2 top-1" style={{ backgroundColor: '#005191' }}></div>
-                    <div className="pb-4">
-                      <div className="font-semibold text-sm" style={{ color: '#005191' }}>[MILESTONE_YEAR_3] - Recognition</div>
-                      <div className="text-gray-600 text-sm">[MILESTONE_DESCRIPTION_3_PLACEHOLDER]</div>
-                    </div>
-                  </div>
-                  <div className="relative pl-6 border-l-2" style={{ borderColor: '#00A9E0' }}>
-                    <div className="absolute w-3 h-3 rounded-full -left-2 top-1" style={{ backgroundColor: '#00A9E0' }}></div>
-                    <div className="pb-4">
-                      <div className="font-semibold text-sm" style={{ color: '#005191' }}>[MILESTONE_YEAR_4] - Excellence</div>
-                      <div className="text-gray-600 text-sm">[MILESTONE_DESCRIPTION_4_PLACEHOLDER]</div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -178,7 +160,7 @@ const Page = () => {
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4 sm:p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed font-medium italic">
-                  "[CHAPTER_VISION_STATEMENT_PLACEHOLDER] - To be the premier student organization that empowers future technologists through innovation, collaboration, and excellence in computer science education."
+                  "To be the premier student organization that empowers future technologists through innovation, collaboration, and excellence in computer science education."
                 </p>
               </div>
               <div>
@@ -186,15 +168,15 @@ const Page = () => {
                 <div className="space-y-2">
                   <div className="flex items-start">
                     <ChevronRight className="text-blue-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[VISION_PILLAR_1_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Fostering innovation and creativity</span>
                   </div>
                   <div className="flex items-start">
                     <ChevronRight className="text-blue-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[VISION_PILLAR_2_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Building collaborative communities</span>
                   </div>
                   <div className="flex items-start">
                     <ChevronRight className="text-blue-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[VISION_PILLAR_3_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Promoting academic excellence</span>
                   </div>
                 </div>
               </div>
@@ -210,7 +192,7 @@ const Page = () => {
               </div>
               <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-lg p-4 sm:p-6 mb-6">
                 <p className="text-gray-700 leading-relaxed font-medium italic">
-                  "[CHAPTER_MISSION_STATEMENT_PLACEHOLDER] - To foster a dynamic learning environment that enhances technical skills, promotes professional development, and creates meaningful industry connections for our student community."
+                  "To foster a dynamic learning environment that enhances technical skills, promotes professional development, and creates meaningful industry connections for our student community."
                 </p>
               </div>
               <div>
@@ -218,15 +200,15 @@ const Page = () => {
                 <div className="space-y-2">
                   <div className="flex items-start">
                     <ChevronRight className="text-teal-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[MISSION_OBJECTIVE_1_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Provide technical skill development</span>
                   </div>
                   <div className="flex items-start">
                     <ChevronRight className="text-teal-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[MISSION_OBJECTIVE_2_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Facilitate industry-academia interaction</span>
                   </div>
                   <div className="flex items-start">
                     <ChevronRight className="text-teal-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                    <span className="text-gray-600 text-sm">[MISSION_OBJECTIVE_3_PLACEHOLDER]</span>
+                    <span className="text-gray-600 text-sm">Organize knowledge-sharing events</span>
                   </div>
                 </div>
               </div>
@@ -255,7 +237,7 @@ const Page = () => {
                   Technical Training
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [TECHNICAL_TRAINING_DESCRIPTION_PLACEHOLDER]
+                  Hands-on workshops and coding sessions on emerging technologies and programming languages.
                 </p>
               </div>
               
@@ -267,7 +249,7 @@ const Page = () => {
                   Professional Networks
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [PROFESSIONAL_NETWORK_DESCRIPTION_PLACEHOLDER]
+                  Connecting students with industry professionals, alumni, and peer communities for mentorship.
                 </p>
               </div>
               
@@ -279,7 +261,7 @@ const Page = () => {
                   Skill Competitions
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [SKILL_COMPETITION_DESCRIPTION_PLACEHOLDER]
+                  Hackathons, coding challenges, and technical contests to foster innovation and problem-solving.
                 </p>
               </div>
               
@@ -291,7 +273,7 @@ const Page = () => {
                   Learning Resources
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [LEARNING_RESOURCES_DESCRIPTION_PLACEHOLDER]
+                  Curated study materials, online courses, and technical libraries for self-paced learning.
                 </p>
               </div>
               
@@ -303,7 +285,7 @@ const Page = () => {
                   Industry Connect
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [INDUSTRY_CONNECT_DESCRIPTION_PLACEHOLDER]
+                  Industry visits, guest lectures, and recruitment drives to bridge academia and corporate world.
                 </p>
               </div>
               
@@ -315,7 +297,7 @@ const Page = () => {
                   Recognition Programs
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed flex-1 hyphens-auto" style={{ wordBreak: 'break-word' }}>
-                  [RECOGNITION_PROGRAMS_DESCRIPTION_PLACEHOLDER]
+                  Awards and certifications to acknowledge outstanding contributions and achievements.
                 </p>
               </div>
             </div>
@@ -340,10 +322,10 @@ const Page = () => {
                   <Star className="text-white" size={24} />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold mb-2" style={{ color: '#005191' }}>
-                  [ACHIEVEMENT_TITLE_1_PLACEHOLDER]
+             
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  [ACHIEVEMENT_DESCRIPTION_1_PLACEHOLDER]
+                 
                 </p>
               </div>
               
@@ -352,10 +334,10 @@ const Page = () => {
                   <Trophy className="text-white" size={24} />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold mb-2" style={{ color: '#005191' }}>
-                  [ACHIEVEMENT_TITLE_2_PLACEHOLDER]
+                 
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  [ACHIEVEMENT_DESCRIPTION_2_PLACEHOLDER]
+                 
                 </p>
               </div>
               
@@ -364,10 +346,10 @@ const Page = () => {
                   <Award className="text-white" size={24} />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold mb-2" style={{ color: '#005191' }}>
-                  [ACHIEVEMENT_TITLE_3_PLACEHOLDER]
+                 
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  [ACHIEVEMENT_DESCRIPTION_3_PLACEHOLDER]
+                 
                 </p>
               </div>
             </div>
@@ -376,7 +358,7 @@ const Page = () => {
 
         {/* Join Us CTA */}
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-xl">
+          <div className="bg-gradient-to-br from-[#005191] via-[#0073b1] to-[#0096d6] rounded-xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
               Ready to Join Our Journey?
             </h2>
