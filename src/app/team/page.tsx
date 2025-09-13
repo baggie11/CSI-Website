@@ -2,7 +2,7 @@
 "use client"
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import teams from '../../data';
+import teams from '../../data/data';
 import { Team, Member } from '../../types/index';
 
 export default function TeamMembers() {
