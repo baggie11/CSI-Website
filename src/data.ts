@@ -54,7 +54,7 @@ const teams :  Team[] = [
                 role : "Design Head",
                 dept : "Computer Science",
                 year : "IV Year",
-                image : "/api/placeholder/300/300",
+                image : "/images/team/design/karthik.png",
             },
             {
                 id : 2,
@@ -319,14 +319,6 @@ const teams :  Team[] = [
                 dept : "EEE",
                 year : "II Year",
                 image : "images/team/pr/sabariesh.png"
-            },
-            {
-                id : 10,
-                name : "Sahiditya",
-                role : "PR Team Member",
-                dept : "Civil",
-                year : "II Year",
-                image : "images/team/pr/sahiditya.png"
             }
         ]
     },
