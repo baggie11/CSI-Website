@@ -344,7 +344,7 @@ export default function Home() {
               Ready to Join Our Community?
             </h3>
             <p className="text-blue-100 mb-10 text-lg leading-relaxed max-w-2xl mx-auto">
-              Become a part of India's largest computer professionals community and accelerate your career in technology. 
+              Become a part of India&apos;s largest computer professionals community and accelerate your career in technology. 
               Unlock opportunities, build connections, and grow with us.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

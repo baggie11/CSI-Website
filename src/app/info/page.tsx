@@ -25,7 +25,7 @@ const Page = () => {
                   Founded in 1965, the Computer Society of India (CSI) stands as the premier body of computer professionals in India, dedicated to advancing the theory and practice of computer science and information technology.
                 </p>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  With over five decades of excellence, CSI has been instrumental in shaping India's IT landscape through education, certification, and professional development programs.
+                  With over five decades of excellence, CSI has been instrumental in shaping India&apos;s IT landscape through education, certification, and professional development programs.
                 </p>
 
 
