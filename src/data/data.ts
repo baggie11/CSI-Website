@@ -32,7 +32,7 @@ const teams :  Team[] = [
                 role : "Vice President",
                 dept : "Computer Science",
                 year : "IV Year",
-                image : "images/team/office/Vijay.png"
+                image : "images/team/office/vijay.png"
             },
             {
                 id : 3,
