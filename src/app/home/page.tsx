@@ -96,7 +96,7 @@ export default function Home() {
               {/* Tagline */}
               <div className="space-y-4">
                 <p className="text-xl text-gray-600 italic">
-                  "Empowering Innovation & Technology Excellence"
+                  &quot;Empowering Innovation & Technology Excellence&quot;
                 </p>
               </div>
 
