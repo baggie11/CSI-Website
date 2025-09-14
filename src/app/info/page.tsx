@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { Calendar, Users, Target, Eye, Award, BookOpen, Code, Star, Building, Trophy, Globe, ChevronRight } from 'lucide-react';
 
 const Page = () => {

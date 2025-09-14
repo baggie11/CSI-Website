@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, Users, Award, Code, ArrowRight, MapPin, Clock } from 'lucide-react';
+import { Calendar, Users, Award, Code, ArrowRight, Clock } from 'lucide-react';
 import EventCard from '@/components/EventCard';
 import { events } from '@/data/events';
 
@@ -180,7 +180,7 @@ export default function Home() {
         </h3>
         <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: '#00A9E0' }}></div>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Don't miss out on our exciting upcoming events and workshops designed to enhance your technical skills
+          Don&apos;t miss out on our exciting upcoming events and workshops designed to enhance your technical skills
         </p>
       </div>
       
