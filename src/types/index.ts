@@ -20,4 +20,5 @@ export interface Events {
   date: string;
   description: string;
   location: string;
+  image?: string;
 }

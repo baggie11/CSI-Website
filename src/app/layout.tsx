@@ -60,7 +60,7 @@ export default function RootLayout({
                 <div className="flex items-center gap-3">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                     <Image
-                      src="/csilogo.jpg"
+                      src="/csilogo_new.png"
                       alt="CSI Logo"
                       fill
                       className="object-contain"
@@ -132,7 +132,7 @@ export default function RootLayout({
                   <div className="flex items-center gap-3">
                     <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                       <Image
-                        src="/csilogo.jpg"
+                        src="/csilogo_new.png"
                         alt="CSI Logo"
                         fill
                         className="object-contain"
@@ -263,7 +263,7 @@ export default function RootLayout({
               <div className="flex justify-center items-center mb-4">
                 <div className="relative w-10 h-10 mr-3 rounded-full overflow-hidden">
                   <Image
-                    src="/csilogo.jpg"
+                    src="/csilogo_new.png"
                     alt="CSI Logo"
                     fill
                     className="object-contain"

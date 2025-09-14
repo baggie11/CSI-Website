@@ -47,7 +47,7 @@ export default function Home() {
                 {/* CSI Logo replacing the entire circle */}
                 <div className="absolute inset-12 flex items-center justify-center">
                   <img 
-                    src="/csilogo.jpg" 
+                    src="/csilogo_new.png" 
                     alt="CSI Logo" 
                     className="w-full h-full object-contain rounded-full shadow-2xl"
                   />
@@ -146,29 +146,29 @@ export default function Home() {
         {/* Quick Stats */}
         <div className={`max-w-6xl mx-auto mb-20 transition-all duration-1000 delay-400 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
-                <Users className="text-white" size={32} />
+            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 flex flex-col items-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
+                <Users className="text-white" size={32} /> 
               </div>
-
+              <div className="text-lg font-semibold text-gray-700">Connecting students with professionals in technology</div>
             </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 flex flex-col items-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
                 <Calendar className="text-white" size={32} />
               </div>
-
+              <div className="text-lg font-semibold text-gray-700">Hosting workshops, seminars, and competitions</div>
             </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 flex flex-col items-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#005191' }}>
                 <Award className="text-white" size={32} />
               </div>
-
+              <div className="text-lg font-semibold text-gray-700">Acknowledging excellence and rewarding innovation</div>
             </div>
-            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 flex flex-col items-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#00A9E0' }}>
                 <Code className="text-white" size={32} />
               </div>
-
+              <div className="text-lg font-semibold text-gray-700">Building skills through coding and real-world projects</div>
             </div>
           </div>
         </div>
